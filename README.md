@@ -2,7 +2,10 @@
 
 To install Training and Inference for SST, please run the following:
 
-`conda env create -f environment.yml`
+```
+git clone https://github.com/architvasan/HPC_SurrogateScreens 
+conda env create -f environment.yml
+```
 
 Instructions for installing docking are listed in the `DataPrep` directory
 
