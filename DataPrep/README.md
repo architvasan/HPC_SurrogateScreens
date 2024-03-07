@@ -1,5 +1,5 @@
-# PIPT
-Parallelized Inhibitor Prediction using Transformers (PIPT)
+# Parallelized Molecular Docking 
+## Scripts written by Alexander Brace, Archit Vasan, and Ozan Gokdemir
 
 ## Table of Contents
 - [PIPT](#pipt)
@@ -10,15 +10,6 @@ Parallelized Inhibitor Prediction using Transformers (PIPT)
   - [Usage](#usage)
 
 ## Installation
-
-To install `pipt`:
-```bash
-git clone https://github.com/architvasan/PIPT
-cd PIPT
-python -m venv env
-source env/bin/activate
-make install
-```
 
 If you are using the OpenEye docking method, you need to obtain a copy of the license.
 Once you have a license file, run:
@@ -35,29 +26,12 @@ conda activate
 conda create -n pipt --clone base
 conda activate pipt
 conda install -c openeye openeye-toolkits -y
-git clone https://github.com/architvasan/PIPT
-cd PIPT
 make install
 ```
-
-### Installation on Lambda
-```bash
-. /software/anaconda3/bin/activate
-conda create -n pipt python=3.9 -y
-conda activate pipt
-conda install -c openeye openeye-toolkits -y
-git clone https://github.com/architvasan/PIPT
-cd PIPT
-make install
-```
-
-TODO: Write installation instruction for pdb_to_pdbqt https://ccsb.scripps.edu/mgltools/downloads/
-
 ## Usage
 
 In order to dock ligands to a receptor with OpenEye, some setup is required to generate an `.oedu`
 file for the receptor. [These](https://docs.eyesopen.com/applications/oedocking/make_receptor/make_receptor_setup.html) intructions provide a helpful guide.
-
 
 To convert a smiles file to a PDB file:
 ```bash
@@ -71,7 +45,7 @@ python -m pipt.cli -r data/8gcy_receptor.oedu -l tests/data/test_smile.dat -o te
 
 To run the high-throughput docking workflow:
 ```bash
-nohup python -m pipt.workflow -c expamples/polaris_prod.yaml &
+nohup python -m pipt.workflow -c examples/polaris_prod.yaml &
 ```
 
 To concatenate docking csv files:
