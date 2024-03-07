@@ -1,7 +1,13 @@
-# HPC_SurrogateScreens
+# High performance binding affinity prediction with a Transformer-based surrogate model
+
+To install Training and Inference for SST, please run the following:
+
+`conda env create -f environment.yml`
+
+Instructions for installing docking are listed in the `DataPrep` directory
 
 ## Generate input docking data.
-Scripts and instructions for installing and running are listed in the `DataPrep` directory.
+Scripts and instructions for running are listed in the `DataPrep` directory.
 
 Packages you will need:
 
@@ -18,26 +24,8 @@ Packages you will need:
 `openeye`
 
 ## Training surrogate models
-Scripts and instructions for installing and running are listed in the `Training` directory.
-
-Packages you will need:
-
-`pandas`
-
-`numpy`
-
-`rdkit`
-
-`smiles-pe`
-
-`tensorflow`
-
-`horovod`
+Scripts and instructions for running are listed in the `Training` directory.
 
 ## Inference on Polaris
-Scripts and instructions for installing and running are listed in the `Inference_Polaris` directory.
-
-Additional packages needed:
-
-`mpi4py`
+Scripts and instructions for running are listed in the `Inference_Polaris` directory.
 
