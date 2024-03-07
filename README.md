@@ -12,20 +12,6 @@ Instructions for installing docking are listed in the `DataPrep` directory
 ## Generate input docking data.
 Scripts and instructions for running are listed in the `DataPrep` directory.
 
-Packages you will need:
-
-`pandas`
-
-`numpy`
-
-`parsl`
-
-`colmena`
-
-`rdkit`
-
-`openeye`
-
 ## Training surrogate models
 Scripts and instructions for running are listed in the `Training` directory.
 
